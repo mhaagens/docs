@@ -16,6 +16,11 @@ one.
 
 ## Webbrowser
 
+:: note
+It is important that the provider-id used for the webbrowser flow is "apple" because then the callback url
+will be exempt from CSRF middleware. This is important because Apple uses a POST form request which does not pass the CSRF cookie back to Kratos.
+::
+
 ```mdx-code-block
 import JsonnetWarning from "../../_common/jsonnetwarning.mdx"
 import Tabs from '@theme/Tabs';
